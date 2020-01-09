@@ -23,8 +23,8 @@ pipeline {
                     emailtext(
                     subject: "it is a mail for junit tests"
                     body:"check the result: <a href="${env.BUILD_URL}">"
-                    to: "sudhakar.srivastava84@gmail.com"
-                    from: ""
+                    to: "sudhakar.pro00@gmail.com"
+                    from: "sudhakar.srivastava84@gmail.com"
                     )
                 }
             }
