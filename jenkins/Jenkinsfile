@@ -21,7 +21,7 @@ pipeline {
                     junit 'target/surefire-reports/*.xml'
                     
                    emailext body: "${env.BUILD_URL}", subject: 'jenkins', to: 'sudhakar.pro00@gmail.com'
-                    )
+                    
                 }
             }
         }
