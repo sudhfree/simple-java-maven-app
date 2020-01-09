@@ -20,11 +20,7 @@ pipeline {
                 always {
                     junit 'target/surefire-reports/*.xml'
                     
-                    emailtext(
-                    subject: "it is a mail for junit tests"
-                    body:"check the result: <a href="${env.BUILD_URL}">"
-                    to: "sudhakar.pro00@gmail.com"
-                    from: "sudhakar.srivastava84@gmail.com"
+                   emailext body: "${env.BUILD_URL}", subject: 'jenkins', to: 'sudhakar.pro00@gmail.com'
                     )
                 }
             }
