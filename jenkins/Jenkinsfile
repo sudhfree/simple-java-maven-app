@@ -19,7 +19,7 @@ pipeline {
         }
         
         stage('sonarqube analysis'){
-            steps{
+            /*steps{
                 withSonarQubeEnv("sonarserver")
     {
         
@@ -30,7 +30,7 @@ pipeline {
             //Execute this command if the compile type is maven
         
     }
-            }
+            }*/
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
