@@ -63,5 +63,15 @@ pipeline {
 )
             }
         }
+        
+        stage("trigger deployment")
+        {
+            
+            steps{
+                
+                build 'testpipeline'
+              
+            }
+        }
     }
 }
