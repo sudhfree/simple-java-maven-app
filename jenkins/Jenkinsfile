@@ -48,8 +48,8 @@ pipeline {
     spec: '''{
           "files": [
             {
-              "pattern": "target/*.war",
-              "target": "libs-snapshot/wars"
+              "pattern": "target/mvn-hello-world.war",
+              "target": "libs-snapshot/wars/"
             }
          ]
     }''',
