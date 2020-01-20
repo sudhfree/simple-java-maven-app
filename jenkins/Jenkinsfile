@@ -59,7 +59,7 @@ pipeline {
     // If not set, the files will be associated with the default build name and build number (i.e the
     // the Jenkins job name and number).
     buildName: 'holyFrog',
-    buildNumber: '1'
+    buildNumber: "${env.BUILD_NUMBER}"
 )
             }
         }
@@ -69,7 +69,7 @@ pipeline {
             
             steps{
                 
-                build 'testpipeline'
+                build job: 'testpipeline', parameters: [string(name: 'buildnumber', value: "${env.BUILD_NUMBER}")]
               
             }
         }
