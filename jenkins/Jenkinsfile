@@ -25,8 +25,8 @@ pipeline {
         
         
           //TODO this should run in a container
-            //bat "mvn sonar:sonar"
-        bat "echo hi"
+            bat "mvn sonar:sonar"
+        //bat "echo hi"
         //-Dsonar.analysis.mode=publish -Dsonar.projectDate= -Dsonar.sourceEncoding=UTF-8 -Dsonar.verbose=true -Dsonar.projectName= -Dsonar.projectVersion=${sonarQubeRelease} -Dsonar.projectKey=${key}"
             //Execute this command if the compile type is maven
         
@@ -64,7 +64,7 @@ pipeline {
             }
         }
         
-        stage("trigger deployment")
+       /* stage("trigger deployment")
         {
             
             steps{
@@ -72,6 +72,6 @@ pipeline {
                 build job: 'testpipeline', parameters: [string(name: 'buildnumber', value: "${env.BUILD_NUMBER}")]
               
             }
-        }
+        }*/
     }
 }
