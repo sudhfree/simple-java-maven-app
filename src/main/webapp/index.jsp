@@ -10,7 +10,7 @@
       <img src="https://octodex.github.com/images/spidertocat.png" alt="Spidertocat"
            class="img-responsive center-block" style="width:250px"/>
       <h2 class="text-center">Hello World!</h2>
-      <p class="text-center">This is the demo for webhook</p>
+      <p class="text-center">This is the demo for webhook with authentication</p>
   </div>
 </body>
 </html>
