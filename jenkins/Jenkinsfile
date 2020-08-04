@@ -8,17 +8,17 @@ pipeline {
         stage('Build') {
             steps {
                 
-                sh 'mvn -B -DskipTests clean package'
+                bat 'mvn -B -DskipTests clean package'
                 
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         
-        /*stage('sonarqube analysis'){
+        stage('sonarqube analysis'){
             steps{
                 withSonarQubeEnv("sonarserver")
     {
@@ -41,7 +41,7 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        /*stage('Deliver') {
             steps {
                rtUpload (
     serverId: 'jfrogartifactory',
