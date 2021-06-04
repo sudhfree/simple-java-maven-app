@@ -8,13 +8,13 @@ pipeline {
         stage('Build') {
             steps {
                 
-                bat 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package'
                 
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
         
@@ -25,7 +25,7 @@ pipeline {
         
         
           //TODO this should run in a container
-            bat "mvn sonar:sonar"
+            sh "mvn sonar:sonar"
         //bat "echo hi"
         //-Dsonar.analysis.mode=publish -Dsonar.projectDate= -Dsonar.sourceEncoding=UTF-8 -Dsonar.verbose=true -Dsonar.projectName= -Dsonar.projectVersion=${sonarQubeRelease} -Dsonar.projectKey=${key}"
             //Execute this command if the compile type is maven
